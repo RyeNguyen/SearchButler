@@ -2,8 +2,9 @@ import React, {useEffect} from 'react';
 import {useLocation} from "react-router-dom";
 import ReactPlayer from 'react-player';
 
-import {useResultContext} from "./context/ResultContextProvider";
-import Loading from "./Loading";
+import {useResultContext} from "../context/ResultContextProvider";
+import Loading from "../Loading";
+import './Results.styles.css';
 
 const Results = () => {
     const {results, isLoading, getResults, searchTerm} = useResultContext();
@@ -25,31 +26,26 @@ const Results = () => {
     switch (location.pathname) {
         case '/search':
             return (
-                <div className='flex flex-wrap justify-between space-y-6 sm:px-56'>
-                    {results?.map(({link, title}, index) => (
-                        <div key={index} className='md:w-2/5 w-full'>
-                            <a href={link} target='_blank' rel='noreferrer'>
-                                {/*<p className='text-sm'>*/}
-                                {/*    {link.length > 30 ? link.substring(0, 30) : link}*/}
-                                {/*</p>*/}
-                                <p className='text-lg hover:underline dark:text-blue-300 text-blue-700'>
-                                    {title}
-                                </p>
-                            </a>
-                        </div>
+                <div className='results'>
+                    {results?.map(({link, title, description}, index) => (
+                        <a className='results__link' key={index} href={link} target='_blank' rel='noreferrer'>
+                            <p className='results__link-text--small'>
+                                {link.length > 30 ? link.substring(0, 30) : link}
+                            </p>
+                            <p className='results__link-title'>{title}</p>
+                            <p>{description}</p>
+                        </a>
                     ))}
                 </div>
             );
 
         case '/image':
             return (
-                <div className='flex flex-wrap justify-center items-center'>
+                <div className='results--full'>
                     {results?.map(({image, link: {href, title}}, index) => (
-                        <a className='sm:p-3 p-5' href={href} key={index} target='_blank' rel='noreferrer'>
-                            <img src={image?.src} alt={title} loading='lazy'/>
-                            <p className='w-36 break-words text-sm mt-2'>
-                                {title}
-                            </p>
+                        <a className='results__image-container' href={href} key={index} target='_blank' rel='noreferrer'>
+                            <img className='results__image' src={image?.src} alt={title} loading='lazy'/>
+                            <p>{title}</p>
                         </a>
                     ))}
                 </div>
@@ -81,7 +77,9 @@ const Results = () => {
                 <div className='flex flex-wrap'>
                     {results?.map((video, index) => (
                         <div key={index} className='p-2'>
-                            {video?.additional_links?.[0].href && <ReactPlayer url={video?.additional_links?.[0].href} controls width='355px' height='200px'/>}
+                            {video?.additional_links?.[0].href &&
+                            <ReactPlayer url={video?.additional_links?.[0].href} controls width='355px'
+                                         height='200px'/>}
                         </div>
                     ))}
                 </div>

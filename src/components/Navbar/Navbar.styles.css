@@ -1,0 +1,21 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.navbar__background {
+    position: fixed;
+    top: 2%;
+    left: -1%;
+    z-index: -1;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 100px;
+    color: rgba(60, 60, 60, 0.1);
+}
+
+.navbar__logo {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 30px;
+    margin-right: 24px;
+}
