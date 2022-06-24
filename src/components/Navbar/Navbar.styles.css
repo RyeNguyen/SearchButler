@@ -19,3 +19,9 @@
     font-size: 30px;
     margin-right: 24px;
 }
+
+.navbar__toggle {
+    position: fixed;
+    top: 32px;
+    right: 96px;
+}
