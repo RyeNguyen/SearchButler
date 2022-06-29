@@ -1,5 +1,5 @@
 .results {
-    padding-top: 26.5vh;
+    padding: 34vh 0 17vh;
     width: 70%;
 }
 
@@ -9,6 +9,7 @@
     display: flex;
     width: auto;
     gap: 16px;
+    padding: 34vh 0 17vh;
 }
 
 .results__link {

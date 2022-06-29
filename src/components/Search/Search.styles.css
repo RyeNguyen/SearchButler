@@ -9,15 +9,21 @@
 
 .search__button {
     position: absolute;
-    width: 36px;
-    height: 36px;
-    top: 12px;
+    width: 40px;
+    height: 40px;
+    top: 8px;
     right: 16px;
     outline: none;
     border: none;
     background: #F0F0F3;
     box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4);
     border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.search__button:hover {
+    transform: scale(1.2);
 }
 
 .body--dark .search__input {

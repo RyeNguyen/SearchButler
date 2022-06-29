@@ -7,7 +7,7 @@ import {useResultContext} from "../context/ResultContextProvider";
 import Loading from "../Loading";
 import './Results.styles.css';
 
-const Results = () => {
+const Results = (props) => {
     const {results, isLoading, getResults, searchTerm} = useResultContext();
     const location = useLocation();
 
@@ -22,8 +22,8 @@ const Results = () => {
         }
     }, [searchTerm, location.pathname]);
 
-    if (isLoading) return <Loading/>;
-
+    if (isLoading) return <Loading darkTheme={props.darkTheme}/>;
+    
     const breakpointColumnsObj = {
         default: 5,
         1366: 4,

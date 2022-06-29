@@ -1,10 +1,17 @@
 import React from 'react';
-import {Circles} from 'react-loader-spinner';
+import {TailSpin} from 'react-loader-spinner';
 
-const Loading = () => {
+const loaderStyle = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: "22vh"
+}
+
+const Loading = (props) => {
     return (
-        <div className='flex justify-center items-center'>
-            <Circles type='Puff' color='#00BFFF' height={550} width={80}/>
+        <div className='loader' style={loaderStyle}>
+            <TailSpin type='Puff' color={props.darkTheme ? "white" : "#3C3C3C"} height={550} width={80}/>
         </div>
     )
 }
