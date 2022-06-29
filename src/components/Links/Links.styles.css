@@ -23,3 +23,22 @@
 .link--active img {
     filter: invert(100%);
 }
+
+.body--dark .link {
+    background: #3d3c3c;
+    box-shadow:  8px 8px 16px #404040,
+    -8px -8px 16px #4e4c4c;
+}
+
+.body--dark .link img {
+    filter: invert(100%);
+}
+
+.body--dark .link--active {
+    background: #F0F0F3;
+    color: #3C3C3C;
+}
+
+.body--dark .link--active img {
+    filter: invert(0);
+}

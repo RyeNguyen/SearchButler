@@ -22,6 +22,10 @@
     border-left: 16px solid #3C3C3C;
 }
 
+.body--dark .results__link:hover {
+    border-color: #F2F3F7;
+}
+
 .results__link:hover .results__link-title {
     font-weight: bold;
 }
@@ -53,8 +57,17 @@
     transition: all 0.3s ease-in-out;
 }
 
+.body--dark .results__image-container {
+    background: #3C3C3C;
+    box-shadow:  20px 20px 40px #2b2b2b, -20px -20px 40px #4d4d4d;
+}
+
 .results__image-container:hover {
     transform: scale(1.05);
+}
+
+.body--dark .results__image-container:hover {
+    box-shadow: 8px 8px 16px #363636, -8px -8px 16px #424242;
 }
 
 .results__image {
@@ -71,6 +84,11 @@
     display: flex;
     align-items: flex-start;
     gap: 24px;
+}
+
+.body--dark .results__video {
+    background: #3C3C3C;
+    box-shadow:  20px 20px 40px #2b2b2b, -20px -20px 40px #4d4d4d;
 }
 
 .results__video iframe {

@@ -9,7 +9,7 @@ const App = () => {
     const [darkTheme, setDarkTheme] = useState(false);
 
     return (
-        <div className={darkTheme ? 'dark' : ''}>
+        <div className={darkTheme ? 'body body--dark' : 'body'}>
             <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
             <Links/>
             <div className='divider'/>
