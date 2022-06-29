@@ -10,9 +10,10 @@ const Navbar = ({darkTheme, setDarkTheme}) => {
             <h1 className='navbar__background'>SearchButler</h1>
             <Link className='navbar__logo' to='/'>SearchButler</Link>
             <Search/>
-            <button className='navbar__toggle' type='button' onClick={() => setDarkTheme(!darkTheme)}>
-                {darkTheme ? 'Light' : 'Dark'}
-            </button>
+            <label className='navbar__toggle'>
+                <input type="checkbox" onClick={() => setDarkTheme(!darkTheme)}/>
+                <span className="navbar__toggle-slider"/>
+            </label>
         </div>
     )
 }

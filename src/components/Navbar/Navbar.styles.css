@@ -19,16 +19,72 @@
     user-select: none; /* Standard */
 }
 
+/* From uiverse.io by @satyamchaudharydev */
+/* The switch - the box around the slider */
+.navbar__toggle {
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+    position: fixed;
+    top: 40px;
+    right: 96px;
+}
+
+/* Hide default HTML checkbox */
+.navbar__toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.navbar__toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F2F3F7;
+    box-shadow: inset 4px 4px 8px rgba(190, 205, 226, 0.5), inset -5px -5px 30px #FFFFFF;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.body--dark .navbar__toggle-slider {
+    background-color: #3C3C3C;
+    box-shadow: inset 13px 13px 26px #2c2c2c, inset -13px -13px 26px #4c4c4c;
+}
+
+.navbar__toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+    transition: .4s;
+}
+
+.navbar__toggle input:checked + .navbar__toggle-slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: #3C3C3C;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
 .navbar__logo {
     font-family: 'Abril Fatface', cursive;
     font-size: 30px;
     margin-right: 24px;
-}
-
-.navbar__toggle {
-    position: fixed;
-    top: 32px;
-    right: 96px;
 }
 
 .body--dark .navbar__background {

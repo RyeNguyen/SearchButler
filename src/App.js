@@ -10,9 +10,10 @@ const App = () => {
 
     return (
         <div className={darkTheme ? 'body body--dark' : 'body'}>
-            <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
-            <Links/>
-            <div className='divider'/>
+            <div className='header'>
+                <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
+                <Links/>
+            </div>
             <Routing/>
             <Footer/>
         </div>
