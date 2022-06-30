@@ -38,6 +38,10 @@
     color: #3C3C3C;
 }
 
+.body--dark .link--active .link-text {
+    color: #3C3C3C;
+}
+
 .body--dark .link--active img {
     filter: invert(0);
 }

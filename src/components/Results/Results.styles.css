@@ -62,6 +62,7 @@
 .body--dark .results__image-container {
     background: #3C3C3C;
     box-shadow:  20px 20px 40px #2b2b2b, -20px -20px 40px #4d4d4d;
+    overflow: hidden;
 }
 
 .results__image-container:hover {
@@ -108,10 +109,24 @@
         width: 100%;
         overflow: hidden
     }
+
+    .results.overflow {
+        overflow: visible;
+    }
+}
+
+@media (max-width: 800px) {
+    .results__video {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 690px) {
     .results {
+        padding: 250px 0 80px;
+    }
+
+    .results__grid {
         padding: 250px 0 80px;
     }
 }

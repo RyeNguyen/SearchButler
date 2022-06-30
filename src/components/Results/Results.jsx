@@ -78,11 +78,13 @@ const Results = (props) => {
             );
 
         case '/video':
+            const videoWidth = window.matchMedia("(max-width: 690px)") ? '100%' : '800px';
+
             return (
-                <div className='results'>
+                <div className='results overflow'>
                     {results?.map(({link, title, description, cite}, index) => link.includes('youtube') &&
                         <div key={index} className='results__video'>
-                            <ReactPlayer url={link} controls width='800px'/>
+                            <ReactPlayer url={link} controls width={videoWidth}/>
                             <div className='results__video-text'>
                                 <p className='results__link-text--small-underline'>{cite?.domain}</p>
                                 <a href={link} target='_blank' rel='noreferrer' className='results__link-title'>{title}</a>
