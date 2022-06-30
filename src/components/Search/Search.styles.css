@@ -44,3 +44,21 @@
 .body--dark .search__button img {
     filter: invert(100%);
 }
+
+@media (max-width: 1280px) {
+    .search {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .search {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .search {
+        width: 80%;
+    }
+}

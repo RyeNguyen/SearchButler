@@ -20,7 +20,7 @@ const Links = () => {
             {links.map(({url, text, icon}, index) => (
                 <NavLink key={index} to={url} className={({isActive}) => (isActive ? 'link link--active' : 'link')}>
                     <img src={icon} alt="link-icon"/>
-                    {text}
+                    <p className='link-text'>{text}</p>
                 </NavLink>
             ))}
         </div>

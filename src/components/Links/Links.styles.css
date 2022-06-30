@@ -26,8 +26,7 @@
 
 .body--dark .link {
     background: #3d3c3c;
-    box-shadow:  8px 8px 16px #404040,
-    -8px -8px 16px #4e4c4c;
+    box-shadow:  8px 8px 16px #404040, -8px -8px 16px #4e4c4c;
 }
 
 .body--dark .link img {
@@ -41,4 +40,31 @@
 
 .body--dark .link--active img {
     filter: invert(0);
+}
+
+@media (max-width: 690px) {
+    .link__container {
+        gap: 16px;
+    }
+
+    .link {
+        padding: 12px 16px;
+    }
+}
+
+@media (max-width: 540px) {
+    .link {
+        min-width: 80px;
+        justify-content: center;
+    }
+
+    .link-text {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .link {
+        min-width: auto;
+    }
 }

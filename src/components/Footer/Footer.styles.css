@@ -12,3 +12,15 @@
 .body--dark .footer {
     background-color: #3C3C3C;
 }
+
+@media (max-width: 1024px) {
+    .footer {
+        padding: 32px 32px 16px;
+    }
+}
+
+@media (max-width: 450px) {
+    .footer {
+        padding: 24px 16px 16px;
+    }
+}

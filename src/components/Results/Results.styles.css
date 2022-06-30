@@ -1,5 +1,5 @@
 .results {
-    padding: 34vh 0 17vh;
+    padding: 280px 0 80px;
     width: 70%;
 }
 
@@ -9,7 +9,7 @@
     display: flex;
     width: auto;
     gap: 16px;
-    padding: 34vh 0 17vh;
+    padding: 280px 0 100px;
 }
 
 .results__link {
@@ -95,4 +95,23 @@
 
 .results__video iframe {
     border-radius: 8px;
+}
+
+@media (max-width: 1440px) {
+    .results {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .results {
+        width: 100%;
+        overflow: hidden
+    }
+}
+
+@media (max-width: 690px) {
+    .results {
+        padding: 250px 0 80px;
+    }
 }
